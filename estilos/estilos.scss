@@ -1,0 +1,323 @@
+$violetaoscuro: #170312;
+$violetamedio: #33032d;
+$violetaclaro: #531253;
+$gris: #eaeaea;
+$blanco: #f4fffd;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: 'Noto Serif', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+p{
+    font-size: 22px;
+}
+
+/*  HEADER  */
+.contenido-header{
+    background-image: url(/img/bg-girl.jpeg);
+    width: 100%;
+    height: 100vh; /*para cubrir el alto del dispositivo*/
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .fondo{
+        width: 0%;
+        height: 100%;
+        max-width: 100%;
+        background-image: url(/img/bg-top.png);
+    }
+
+    .texto{
+        width: calc(100vw - 20px);
+        height: 100vh;
+        font-size: 90px;
+        font-weight: 400;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: purple;
+        mix-blend-mode: multiply; /* para hacer el texto transparente*/
+    }
+}
+
+/* NAVBAR  */
+nav{
+    background-color: $violetamedio;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    margin-bottom: 60px;
+
+    a{
+        display: inline-block;
+        padding: 10px 30px;
+        font-size: 20px;
+        background-color: $violetamedio;
+        margin: 0 10px;
+        transition: .5s ease all;
+        color: $gris;
+        text-decoration: none;
+    }
+
+    a:hover{
+        transform: translateY(18px);
+        background-color: $violetaclaro;
+        color: $gris;
+    }
+}
+
+/*  NOSOTROS  */
+.nosotros{
+    margin-bottom: 60px;
+
+    .titulo{
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    .enlace{
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 40px;
+        color: $violetaclaro;
+        font-weight: 700;
+        border-bottom: 1px solid transparent;
+        transition: .3s ease all;
+    }
+
+    .enlace:hover{
+        text-decoration: none;
+        letter-spacing: 3px;
+        border-bottom: 1px solid $violetaclaro;
+    }
+}
+
+.subtitulo{
+    font-size: 20px;
+    color: $violetaoscuro;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    span{
+        background-color: $gris;
+        padding: 0 15px;
+        z-index: 99;
+        position: relative;
+    }
+}
+
+.subtitulo::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: $violetaoscuro;
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+
+/*  PRODUCTOS  */
+.productos{
+    background: $gris;
+    padding: 20px;
+    margin-bottom: 60px;
+
+    .titulo{
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    .producto{
+        position: relative;
+        width: 100%;
+
+        .overlay{
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: $violetaclaro;
+            overflow: hidden;
+            transition: .5s ease;
+
+            .overlay-texto{
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                white-space: nowrap;
+                color: $blanco;
+                font-size: 18px;
+                transform: translate(-50%,-50%);
+                overflow: hidden;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+
+    .producto:hover .overlay{ /*o sea, que cuando el puntero interacciones con el producto, el overlay haga lo siguiente*/
+        width: 100%;
+        opacity: .8;
+    }
+}
+
+.btn-productos{
+    background-color: $violetaclaro;
+    color: white;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+
+.btn-productos:hover{
+    background-color: transparent;
+    border: 2px solid $violetaclaro;
+    color: $violetaclaro;
+}
+
+/* SEPARADOR PARALLAX */
+.separador{
+    width: 100%;
+    height: 250px;
+    background-image: url(/img/bg-separator.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+    
+    p{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        padding: 10px;
+    }
+}
+
+/*  ACERCA DE  */
+.acerca-de{
+    margin-bottom: 60px;
+}
+
+/*  GALERIA  */
+.galeria{
+    margin-bottom: 60px;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/*  FOOTER  */
+.contacto{
+    margin-bottom: 60px;
+}
+
+.redes{
+    padding: 10px 10px 0 10px;
+    background-color: $violetaclaro;
+
+    .fab{
+        padding: 5px 5px 0 15px;
+        width: 50px;
+        transition: .3s ease all;
+    }
+
+    .fab:hover{
+        transform: scale(1.2);
+    }
+}
+
+.copy{
+    color: $gris;
+
+    p{
+        font-size: 15px;
+        padding-top: 8px;
+    }
+}
+
+/*  MEDIA QUERY  */
+@media screen and (max-width: 992px){
+    p{
+        font-size: 18px;
+    }
+
+    .contenido-header{
+        .texto{
+            font-size: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center
+            ;
+        }
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .nosotros{
+        .titulo{
+            font-size: 30px;
+        }
+    }
+
+    .productos{
+        .titulo{
+            font-size: 30px;
+        }
+    }
+
+    .telefono{
+
+        margin-bottom: -50px;
+
+        p{
+            font-size: 15px;
+        }
+
+        img{
+            width: 40px;
+        }
+    }
+
+}

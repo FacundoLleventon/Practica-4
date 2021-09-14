@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-size: 22px;
+}
+
+/*  HEADER  */
+.contenido-header {
+  background-image: url(/img/bg-girl.jpeg);
+  width: 100%;
+  height: 100vh;
+  /*para cubrir el alto del dispositivo*/
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contenido-header .fondo {
+  width: 0%;
+  height: 100%;
+  max-width: 100%;
+  background-image: url(/img/bg-top.png);
+}
+
+.contenido-header .texto {
+  width: calc(100vw - 20px);
+  height: 100vh;
+  font-size: 90px;
+  font-weight: 400;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: purple;
+  mix-blend-mode: multiply;
+  /* para hacer el texto transparente*/
+}
+
+/* NAVBAR  */
+nav {
+  background-color: #33032d;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  margin-bottom: 60px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: #33032d;
+  margin: 0 10px;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+nav a:hover {
+  -webkit-transform: translateY(18px);
+          transform: translateY(18px);
+  background-color: #531253;
+  color: #eaeaea;
+}
+
+/*  NOSOTROS  */
+.nosotros {
+  margin-bottom: 60px;
+}
+
+.nosotros .titulo {
+  width: 70%;
+  font-size: 44px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.nosotros .enlace {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 40px;
+  color: #531253;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.nosotros .enlace:hover {
+  text-decoration: none;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #531253;
+}
+
+.subtitulo {
+  font-size: 20px;
+  color: #170312;
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+  z-index: 2;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.subtitulo span {
+  background-color: #eaeaea;
+  padding: 0 15px;
+  z-index: 99;
+  position: relative;
+}
+
+.subtitulo::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background: #170312;
+  position: relative;
+  top: -29px;
+  z-index: 1;
+}
+
+/*  PRODUCTOS  */
+.productos {
+  background: #eaeaea;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.productos .titulo {
+  width: 70%;
+  font-size: 44px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.productos .producto {
+  position: relative;
+  width: 100%;
+}
+
+.productos .producto .overlay {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #531253;
+  overflow: hidden;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.productos .producto .overlay .overlay-texto {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  white-space: nowrap;
+  color: #f4fffd;
+  font-size: 18px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.productos .producto:hover .overlay {
+  /*o sea, que cuando el puntero interacciones con el producto, el overlay haga lo siguiente*/
+  width: 100%;
+  opacity: .8;
+}
+
+.btn-productos {
+  background-color: #531253;
+  color: white;
+  padding: 7px 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 2px solid transparent;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.btn-productos:hover {
+  background-color: transparent;
+  border: 2px solid #531253;
+  color: #531253;
+}
+
+/* SEPARADOR PARALLAX */
+.separador {
+  width: 100%;
+  height: 250px;
+  background-image: url(/img/bg-separator.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 60px;
+}
+
+.separador p {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  padding: 10px;
+}
+
+/*  ACERCA DE  */
+.acerca-de {
+  margin-bottom: 60px;
+}
+
+/*  GALERIA  */
+.galeria {
+  margin-bottom: 60px;
+}
+
+.galeria img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*  FOOTER  */
+.contacto {
+  margin-bottom: 60px;
+}
+
+.redes {
+  padding: 10px 10px 0 10px;
+  background-color: #531253;
+}
+
+.redes .fab {
+  padding: 5px 5px 0 15px;
+  width: 50px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.redes .fab:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.copy {
+  color: #eaeaea;
+}
+
+.copy p {
+  font-size: 15px;
+  padding-top: 8px;
+}
+
+/*  MEDIA QUERY  */
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+  .contenido-header .texto {
+    font-size: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+  }
+  .nosotros .titulo {
+    font-size: 30px;
+  }
+  .productos .titulo {
+    font-size: 30px;
+  }
+  .telefono {
+    margin-bottom: -50px;
+  }
+  .telefono p {
+    font-size: 15px;
+  }
+  .telefono img {
+    width: 40px;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
